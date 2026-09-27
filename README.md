@@ -67,6 +67,8 @@ A Board is created first, followed by creating and managing a List using the Boa
 
 Resource IDs are stored in Postman environment variables and reused in subsequent requests.
 
+A separate diagram (`Trello API Execution Flow.png`) documents the full request order and dependencies between all Board, List, and Card operations.
+
 ## Postman Test Scripts
 
 Postman test scripts were used to validate API responses automatically.
@@ -78,20 +80,29 @@ Examples of validations include:
 * Response contains an `id`
 * Response contains a `name`
 * Response contains a `url`
+* Status code is `404` after a resource is deleted, confirming successful deletion
 
 ## Collection Run Results
 
 The Postman collection was executed using the configured Trello API environment.
 
-| Metric                | Result |
-| --------------------- | -----: |
-| Total Tests           |     47 |
-| Passed                |     45 |
-| Failed                |      2 |
-| Errors                |      0 |
-| Average Response Time | 300 ms |
+| Metric                 | Result |
+| ----------------------- | -----: |
+| Total Tests            |     47 |
+| Passed                 |     45 |
+| Failed                 |      2 |
+| Errors                 |      0 |
+| Average Response Time  | 300 ms |
 
 The collection run demonstrates the execution of API requests and automated response validations across the project.
+
+## Screenshots
+
+The `screenshots/` folder contains supporting evidence of the testing process:
+
+* **Run-Results.png** – Full collection run summary (47 tests, 45 passed, 2 failed). Sensitive values (API Key) are redacted.
+* **postman-test-assertions.png** – Test script assertions for the *Create Board* request, validating that the response contains `id` and `name`.
+* **postman-test-assertions..png** – Test script assertion for the *Get Deleted Board* request, validating a `404` status code after deletion.
 
 ## Project Structure
 
@@ -99,8 +110,12 @@ The collection run demonstrates the execution of API requests and automated resp
 Trello-API-Testing-Postman
 │
 ├── README.md
-│
-└── Trello-APIs.postman_collection.json
+├── Trello APIs.postman_collection.json
+├── Trello API Execution Flow.png
+└── screenshots/
+    ├── Run-Results.png
+    ├── postman-test-assertions.png
+    └── postman-test-assertions..png
 ```
 
 ## Project Type
