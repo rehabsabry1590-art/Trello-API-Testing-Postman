@@ -1,4 +1,4 @@
-# Trello API Testing Project – Postman
+# Trello API Automation Testing Project – Postman
 
 ## Project Overview
 
@@ -86,13 +86,13 @@ Examples of validations include:
 
 The Postman collection was executed using the configured Trello API environment.
 
-| Metric                 | Result |
-| ----------------------- | -----: |
-| Total Tests            |     47 |
-| Passed                 |     45 |
-| Failed                 |      2 |
-| Errors                 |      0 |
-| Average Response Time  | 300 ms |
+| Metric                | Result |
+| --------------------- | -----: |
+| Total Tests           |     47 |
+| Passed                |     45 |
+| Failed                |      2 |
+| Errors                |      0 |
+| Average Response Time | 300 ms |
 
 The collection run demonstrates the execution of API requests and automated response validations across the project.
 
@@ -101,27 +101,4 @@ The collection run demonstrates the execution of API requests and automated resp
 The `screenshots/` folder contains supporting evidence of the testing process:
 
 * **Run-Results.png** – Full collection run summary (47 tests, 45 passed, 2 failed). Sensitive values (API Key) are redacted.
-* **postman-test-assertions.png** – Test script assertions for the *Create Board* request, validating that the response contains `id` and `name`.
-* **postman-test-assertions..png** – Test script assertion for the *Get Deleted Board* request, validating a `404` status code after deletion.
-
-## Project Structure
-
-```text
-Trello-API-Testing-Postman
-│
-├── README.md
-├── Trello APIs.postman_collection.json
-├── Trello API Execution Flow.png
-└── screenshots/
-    ├── Run-Results.png
-    ├── postman-test-assertions.png
-    └── postman-test-assertions..png
-```
-
-## Project Type
-
-Training / Portfolio Project
-
-## Author
-
-**Rehab Sabry**
+* **postman-test-assertions.png** – Test script assertions for the *Create Board* request, validating that the response contains*
