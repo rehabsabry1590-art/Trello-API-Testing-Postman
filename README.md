@@ -120,10 +120,6 @@ Trello-API-Testing-Postman
     └── postman-test-assertions..png
 ```
 
-## Project Type
-
-API Testing Portfolio Project
-
 ## Author
 
 **Rehab Sabry**
